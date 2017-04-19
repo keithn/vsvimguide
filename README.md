@@ -6,7 +6,7 @@ Vims power comes from chaining combinations together, and while much of vim is w
 
 This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys ( like ctrl ) which leaves Resharpers bindings as default
 
-##Changing Text
+##Changing Text##
 
 
 cw  - changes the word from the cusor to the end of the word
