@@ -86,6 +86,11 @@ The main reason for this guide is essentially how to use VsVim effectively with 
 
 ```zz``` - center current line in center of screen
 
+```*``` - search for word under cursor
+
+m<char> - mark current location and store it in <char>
+
+``` `<char>``` - goto mark set in ```<char>```
 
 # Resharper Fundamentals
 
