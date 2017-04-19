@@ -159,8 +159,12 @@ Assuming the Visual Studio key bindings are used
 
 # Resources 
 
+## Websites
 http://vim.wikia.com/wiki/Vim_Tips_Wiki  - so much gold here, but hard to find relevant nuggets
 
+## Software
+
+http://carnackeys.com/ - Displays key combos on your screen
 
 
 
