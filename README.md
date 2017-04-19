@@ -41,9 +41,15 @@ The main reason for this guide is essentially how to use VsVim effectively with 
 
 ```c<n>t<char>``` -  same as previous ct but find the nth occurance of the char
 
-```cib``` - change text inside current brackets ( ) 
+```ci(``` - change text inside current brackets ( ) 
 
-```ciB`` - change text inside current curly braces { }
+```ci{`` - change text inside current curly braces { }
+
+```ci'``` - change text inside current ' quotes
+
+```ci"``` - change text inside current " quotes
+
+```cit``` - change text inside current html/xml tag  
 
 ```r<char>``` - replaces the character under the cursor
 
