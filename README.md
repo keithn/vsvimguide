@@ -152,6 +152,8 @@ Assuming the Visual Studio key bindings are used
 
 ```Ctrl-Q``` - Quick Launch, allows you to search and run any command visual studio knows about, tells you if it has a key binding, and its menu location.  
 
+<kbd>a</kbd>
+```Alt-F-d-n```
 
 # Scenarios
 
@@ -165,6 +167,8 @@ http://vim.wikia.com/wiki/Vim_Tips_Wiki  - so much gold here, but hard to find r
 ## Software
 
 http://carnackeys.com/ - Displays key combos on your screen
+
+https://obsproject.com/ - Free open source Screen casting software
 
 
 
