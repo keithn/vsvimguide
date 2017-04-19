@@ -107,8 +107,11 @@ The main reason for this guide is essentially how to use VsVim effectively with 
 Assuming the Visual Studio key bindings are used
 
 ```ctrl-t``` - Navigrate to File
+
 ```Alt-Ins``` - Generate Menu, allows you to generate code depending on current context
+
 ```Ctrl-Alt-Enter``` - Format the current file ( never fight resharpers formatting, configure it if you don't like it)
+
 ```Ctrl-r-o``` - Move class to another file
 
 # Visual Studio Fundamentals
