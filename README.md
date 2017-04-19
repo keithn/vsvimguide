@@ -1,5 +1,7 @@
 # VsVim + Resharper Guide with C# editing scenarios
 
+Stack: Visual Studio 2017 - Resharper 2017 - VsVim 2.3
+
 Work in progress!  The guide highlights useful editing commands while programming using VsVim.  
 
 Vims power comes from chaining combinations together, and while much of vim is well documented it is often hard to learn effective combo!
