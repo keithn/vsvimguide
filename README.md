@@ -9,6 +9,7 @@ This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys 
 If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR
 
 
+# VsVim Fundamentals
 
 ## Changing Text
 
@@ -69,3 +70,11 @@ If there are any editing scenarios in relation to C# coding not covered raise an
 ```gd``` - goto defention ( use ontop of methods  / classes etc )
 
 ```zz``` - center current line in center of screen
+
+
+# Resharper Fundamentals
+
+
+
+# Scenarios
+
