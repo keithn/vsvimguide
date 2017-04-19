@@ -13,6 +13,9 @@ If there are any editing scenarios in relation to C# coding not covered raise an
 
 # VsVim Fundamentals
 
+The main reason for this guide is essentially how to use VsVim effectively with visual studio and resharper.  It's a semi niche corner of the coding world. So one of the most important things is to be reasonablly effective with vim editing ( and sepecifically VsVim ).  But often we step outside of Vim and make use of resharper / auto complete / refactorings / code generation / templates / Visual Studio hot keys to better leverage all the toys at our disposal
+
+
 ## Changing Text
 
 
@@ -76,7 +79,16 @@ If there are any editing scenarios in relation to C# coding not covered raise an
 
 # Resharper Fundamentals
 
-
+# Visual Studio Fundamentals
 
 # Scenarios
+
+
+
+# Resources 
+
+http://vim.wikia.com/wiki/Vim_Tips_Wiki  - so much gold here, but hard to find relevant nuggets
+
+
+
 
