@@ -41,22 +41,31 @@ If there are any editing scenarios in relation to C# coding not covered raise an
 ```O``` - same as o, but open above
 
 ```x``` - delete character
+
 ```dd``` - delete line
+
 ```u``` - undo
 
 ```A``` - append to end of current line ( leaves in insert mode )
+
 ```a``` - append after current cursor (leaves in insert mode )
 
 ## Navigaton
 
 ```h``` - cursor left
+
 ```j``` - cursor down
+
 ```k``` - cursor up
+
 ```l``` - cursor down
 
 ```w``` - beginning of next word
+
 ```e``` - end of next word
+
 ```b``` - beginning of previous word,  if in the middle of a word, it goes back to the beginning of that word
 
 ```gd``` - goto defention ( use ontop of methods  / classes etc )
+
 ```zz``` - center current line in center of screen
