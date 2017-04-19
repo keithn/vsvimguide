@@ -1,5 +1,14 @@
 # VsVim + Resharper Guide with C# editing scenarios
 
+- [VsVim + Resharper Guide with C# editing scenarios](#vsvim-+-resharper-guide-with-c#-editing-scenarios)
+- [VsVim Fundamentals](#vsvim-fundamentals)
+- [Changing Text](#changing-text)
+- [Navigaton](#navigaton)
+- [Resharper Fundamentals](#resharper-fundamentals)
+- [Visual Studio Fundamentals](#visual-studio-fundamentals)
+- [Scenarios](#scenarios)
+- [Resources](#resources)
+
 Stack: Visual Studio 2017 - Resharper 2017 - VsVim 2.3
 
 Work in progress!  The guide highlights useful editing commands while programming using VsVim.  
