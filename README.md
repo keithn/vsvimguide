@@ -104,7 +104,17 @@ The main reason for this guide is essentially how to use VsVim effectively with 
 
 # Resharper Fundamentals
 
+Assuming the Visual Studio key bindings are used
+
+```ctrl-t``` - Navigrate to File
+```Alt-Ins``` - Generate Menu, allows you to generate code depending on current context
+```Ctrl-Alt-Enter``` - Format the current file ( never fight resharpers formatting, configure it if you don't like it)
+```Ctrl-r-o``` - Move class to another file
+
 # Visual Studio Fundamentals
+
+```Ctrl-Q``` - Quick Launch, allows you to search and run any command visual studio knows about, tells you if it has a key binding, and its menu location.  
+
 
 # Scenarios
 
