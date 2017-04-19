@@ -11,14 +11,38 @@ This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys 
 If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR
 
 
-- [VsVim + Resharper Guide with C# editing scenarios](#vsvim-+-resharper-guide-with-c#-editing-scenarios)
-- [VsVim Fundamentals](#vsvim-fundamentals)
-  - [Changing Text](#changing-text)
-  - [Navigaton](#navigaton)
-- [Resharper Fundamentals](#resharper-fundamentals)
-- [Visual Studio Fundamentals](#visual-studio-fundamentals)
-- [Scenarios](#scenarios)
-- [Resources](#resources)
+# Setup
+
+This is largely down to personal preference, but by default, some things make things slightly tricky to deal with
+
+## Escape Key
+
+The escape key is hugely important to Vim, however, the key itself is a bit far away on many keyboards.  So one popular option is to bind your capslock key to be escape ( there are other key combos you can bind escape to, but I think this is a good option if you never use your caps lock )
+
+To do this install AutoHotKey, create a file on your desktop called  "CapsToEscape.cpk"
+and put the following line in the file```Capslock::Esc```
+then you can run this manually, or set it to run on startup, and magically your caps lock key will now be the esc key.  One thing to note, ensure caps lock is OFF before running the script otherwise you'll be stuck with caps on.
+
+
+## .vsvimrc
+
+This is where you can map keys to vim commands.  VsVim allows you to bind things to visual studio, and by extension, resharper.  The following are a number of useful bindings 
+
+```
+nnoremap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+set clipboard=unnamed
+map ;; A;<Esc>
+map ] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+map [ :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+```
+
+this maps gd ( goto definition ) to resharpers version
+
+it sets the windows clipboard to bind to vims default buffer it cuts and pastes to ( which is really useful if you use a clipboard manager like ditto )
+
+It maps ;; to append a semi colon to the end of the line without going into insert mode.  This is useful as much resharper / vim magic generates code for you while not in insert mode but leaves the code without the final semicolon.
+
+it binds [ and ] to resharpers goto previous and next method.   By default, in vim, this is previous and next section which has little use within visual studio.  
 
 
 # VsVim Fundamentals
