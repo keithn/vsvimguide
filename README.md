@@ -152,8 +152,8 @@ Assuming the Visual Studio key bindings are used
 
 ```Ctrl-Q``` - Quick Launch, allows you to search and run any command visual studio knows about, tells you if it has a key binding, and its menu location.  
 
-<kbd>a</kbd>
-```Alt-F-d-n```
+
+<kbd>Alt</kbd>+<kbd>F</kbd>d<kbd>n</kbd>  - Add new project to solution
 
 # Scenarios
 
