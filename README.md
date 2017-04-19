@@ -43,13 +43,13 @@ The main reason for this guide is essentially how to use VsVim effectively with 
 
 ```r<char>``` - replaces the character under the cursor
 
-```<n>r<char>``` - replaces the next <n> characters from the cursor with <char>
+```<n>r<char>``` - replaces the next ```<n>``` characters from the cursor with ```<char>```
 
 ```R``` - overwrite mode / Replace characters
 
 ```s``` - substitute, remove the character under cursor and enter insert mode
 
-```<n>s``` - remove the next <n> characters and enter insert mode
+```<n>s``` - remove the next ```<n>``` characters and enter insert mode
 
 
 ```o``` - open ( leave in insert mode) a new line under current line with correct indenting
@@ -88,9 +88,9 @@ The main reason for this guide is essentially how to use VsVim effectively with 
 
 ```*``` - search for word under cursor
 
-m<char> - mark current location and store it in <char>
+```m<char>``` - mark current location and store it in ```<char>```
 
-``` `<char>``` - goto mark set in ```<char>```
+````<char>``` - goto mark set in ```<char>```
 
 # Resharper Fundamentals
 
