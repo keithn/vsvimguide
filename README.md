@@ -1,14 +1,5 @@
 # VsVim + Resharper Guide with C# editing scenarios
 
-- [VsVim + Resharper Guide with C# editing scenarios](#vsvim-+-resharper-guide-with-c#-editing-scenarios)
-- [VsVim Fundamentals](#vsvim-fundamentals)
-  - [Changing Text](#changing-text)
-  - [Navigaton](#navigaton)
-- [Resharper Fundamentals](#resharper-fundamentals)
-- [Visual Studio Fundamentals](#visual-studio-fundamentals)
-- [Scenarios](#scenarios)
-- [Resources](#resources)
-
 Stack: Visual Studio 2017 - Resharper 2017 - VsVim 2.3
 
 Work in progress!  The guide highlights useful editing commands while programming using VsVim.  
@@ -18,6 +9,16 @@ Vims power comes from chaining combinations together, and while much of vim is w
 This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys ( like ctrl ) which leaves Resharpers bindings as default
 
 If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR
+
+
+- [VsVim + Resharper Guide with C# editing scenarios](#vsvim-+-resharper-guide-with-c#-editing-scenarios)
+- [VsVim Fundamentals](#vsvim-fundamentals)
+  - [Changing Text](#changing-text)
+  - [Navigaton](#navigaton)
+- [Resharper Fundamentals](#resharper-fundamentals)
+- [Visual Studio Fundamentals](#visual-studio-fundamentals)
+- [Scenarios](#scenarios)
+- [Resources](#resources)
 
 
 # VsVim Fundamentals
