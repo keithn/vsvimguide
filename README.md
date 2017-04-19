@@ -25,6 +25,16 @@ If there are any editing scenarios in relation to C# coding not covered raise an
 
 The main reason for this guide is essentially how to use VsVim effectively with visual studio and resharper.  It's a semi niche corner of the coding world. So one of the most important things is to be reasonablly effective with vim editing ( and sepecifically VsVim ).  But often we step outside of Vim and make use of resharper / auto complete / refactorings / code generation / templates / Visual Studio hot keys to better leverage all the toys at our disposal
 
+## How to switch to VsVim as a complete Noob
+
+This isn't trying to be a beginners guide but just some general advice for beginners about how to make the switch without too much friction.  Vim takes a while to get good at and much of the advice advocates enduring the pain until you get good enough, but you don't have to.   You can go through a progression.
+
+- It's ok to stay in insert mode, use arrow keys, and your mouse, everything will be semi normal
+- Start coming out of insert mode to practice Vim things,  hjkl to move around, w to move between words,  dd to delete lines, c commands to change text like ciw ci" cw, and the corresponding delete commands  diw dw   
+- Keep learning commands like the one in this guide till you are using them by default
+- Start challenging yourself to stay out of insert mode
+- At this point you should start feeling Vim is a more productive way to edit and you'll naturally keep expanding your skills, keep looking at tips, often many of the combos won't occur to you even though you know what the commands do.  Or you may find there is even a better combo than the current combo you use.
+
 
 ## Changing Text
 
