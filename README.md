@@ -6,6 +6,10 @@ Vims power comes from chaining combinations together, and while much of vim is w
 
 This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys ( like ctrl ) which leaves Resharpers bindings as default
 
+If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR
+
+
+
 ## Changing Text
 
 
@@ -44,7 +48,7 @@ u - undo
 A - append to end of current line ( leaves in insert mode )
 a - append after current cursor (leaves in insert mode )
 
-##Navigaton
+## Navigaton
 
 h - cursor left
 j - cursor down
