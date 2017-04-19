@@ -100,7 +100,7 @@ The main reason for this guide is essentially how to use VsVim effectively with 
 
 ```m<char>``` - mark current location and store it in ```<char>```
 
-````<char>``` - goto mark set in ```<char>```
+``` `<char>``` - goto mark set in ```<char>```
 
 # Resharper Fundamentals
 
