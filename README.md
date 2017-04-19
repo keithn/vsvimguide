@@ -2,8 +2,8 @@
 
 - [VsVim + Resharper Guide with C# editing scenarios](#vsvim-+-resharper-guide-with-c#-editing-scenarios)
 - [VsVim Fundamentals](#vsvim-fundamentals)
-- [Changing Text](#changing-text)
-- [Navigaton](#navigaton)
+ - [Changing Text](#changing-text)
+ - [Navigaton](#navigaton)
 - [Resharper Fundamentals](#resharper-fundamentals)
 - [Visual Studio Fundamentals](#visual-studio-fundamentals)
 - [Scenarios](#scenarios)
