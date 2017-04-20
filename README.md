@@ -9,7 +9,7 @@ Vims power comes from chaining combinations together, and while much of vim is w
 This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys ( like ctrl ) which leaves Resharpers bindings as default
 
 If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR
-
+https://github.com/keithn/vsvimguide.git
 
 # Setup
 
@@ -140,20 +140,26 @@ This isn't trying to be a beginners guide but just some general advice for begin
 
 Assuming the Visual Studio key bindings are used
 
-```ctrl-t``` - Navigrate to File
+```Ctrl+t``` - Navigrate to File
 
-```Alt-Ins``` - Generate Menu, allows you to generate code depending on current context
+```Alt+Ins``` - Generate Menu, allows you to generate code depending on current context
 
-```Ctrl-Alt-Enter``` - Format the current file ( never fight resharpers formatting, configure it if you don't like it)
+```Ctrl+Alt+Enter``` - Format the current file ( never fight resharpers formatting, configure it if you don't like it)
 
-```Ctrl-r-o``` - Move class to another file
+```Ctrl+r-o``` - Move class to another file
+
+```Ctrl+Alt+/``` - Comment Out line of code / Selection
+
+```Alt+Enter``` - Context aware Actions / Quick fixes / transformations
 
 # Visual Studio Fundamentals
 
-```Ctrl-Q``` - Quick Launch, allows you to search and run any command visual studio knows about, tells you if it has a key binding, and its menu location.  
+```Ctrl+Q``` - Quick Launch, allows you to search and run any command visual studio knows about, tells you if it has a key binding, and its menu location.  
 
 
-<kbd>Alt</kbd>+<kbd>F</kbd><kbd>d</kbd><kbd>n</kbd>  - Add new project to solution
+```Alt+F-d-n``` - Add new project to solution
+
+```Alt+T-n-n``` - Manage Nuget Packages for Solution
 
 # Scenarios
 
