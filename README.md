@@ -95,7 +95,7 @@ This isn't trying to be a beginners guide but just some general advice for begin
 
 ```ci(``` - change text inside current brackets ( ) 
 
-```ci{`` - change text inside current curly braces { }
+```ci{``` - change text inside current curly braces { }
 
 ```ci'``` - change text inside current ' quotes
 
@@ -195,6 +195,8 @@ Assuming the Visual Studio key bindings are used
 ```Alt-Alt``` - Make auto complete dialogs disappear, super useful as by default esc is what's commonly used which will take you out of insert mode.
 
 # Scenarios
+
+## 
 
 
 # Resources 
