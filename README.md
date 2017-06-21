@@ -48,6 +48,21 @@ it binds [ and ] to resharpers goto previous and next method.   By default, in v
 
 it binds - and + to pageup and pagedown
 
+## Visual studio keyboard binding
+
+When Auto complete dialogs come up, they need the arrow keys to navigate up and down between options, to avoid having to use the arrow keys we can bind Vim like bindings
+
+In Tools->Options->Enviroment->Keyboard
+
+Set the following bindings (Global)
+
+
+```ALT-J``` - Edit.LineDown
+
+```ALT-H``` - Edit.LineUp
+
+
+
 # VsVim Fundamentals
 
 The main reason for this guide is essentially how to use Vim effectively with visual studio and resharper.  The key motivation to VsVim is to be able to leverage Vims powerful editing capabilites within Visual Studio, so we need to spend a lot of effort to get really effective with standard vim commands ( and sepecifically VsVim ).  But often we step outside of Vim and make use of resharper / auto complete / refactorings / code generation / templates / Visual Studio hot keys to better leverage all the toys at our disposal
