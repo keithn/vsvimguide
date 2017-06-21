@@ -182,6 +182,7 @@ Assuming the Visual Studio key bindings are used
 
 ```Alt+Enter``` - Context aware Actions / Quick fixes / transformations
 
+
 # Visual Studio Fundamentals
 
 ```Ctrl+Q``` - Quick Launch, allows you to search and run any command visual studio knows about, tells you if it has a key binding, and its menu location.  
@@ -190,6 +191,8 @@ Assuming the Visual Studio key bindings are used
 ```Alt+F-d-n``` - Add new project to solution
 
 ```Alt+T-n-n``` - Manage Nuget Packages for Solution
+
+```Alt-Alt``` - Make auto complete dialogs disappear, super useful as by default esc is what's commonly used which will take you out of insert mode.
 
 # Scenarios
 
