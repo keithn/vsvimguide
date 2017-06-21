@@ -8,19 +8,19 @@ Vims power comes from chaining combinations together, and while much of vim is w
 
 This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys ( like ctrl ) which leaves Resharpers and visual studio bindings as default.  This is due to resharper having an awful lot of functionality bound to lots of different key combinations that rather than working out remapping to vim combinations I've tried to leave resharper pretty standard.  This does mean certain Vim functionality is unavailble, however some of the more useful things are overcome through a custom .vsvimrc
 
-If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR
+If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR on the repository
 https://github.com/keithn/vsvimguide.git
 
 # Setup
 
-This is largely down to personal preference, but by default, some things make things slightly tricky to deal with.  
+This is largely down to personal preference, but by default, some things are slightly tricky to deal with and adaptions / compromises need to be made
 
 ## Escape Key
 
 The escape key is hugely important to Vim, however, the key itself is a bit far away on many keyboards.  So one popular option is to bind your capslock key to be escape ( there are other key combos you can bind escape to, but I think this is a good option if you never use your caps lock )
 
 To do this install AutoHotKey, create a file on your desktop called  "CapsToEscape.cpk"
-and put the following line in the file```Capslock::Esc```
+and put the following line in the file```Capslock::Esc```  (or download the file from this repository)
 then you can run this manually, or set it to run on startup, and magically your caps lock key will now be the esc key.  One thing to note, ensure caps lock is OFF before running the script otherwise you'll be stuck with caps on.
 
 
