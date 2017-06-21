@@ -6,14 +6,14 @@ Work in progress!  The guide highlights useful editing commands while programmin
 
 Vims power comes from chaining combinations together, and while much of vim is well documented it is often hard to learn effective combo!
 
-This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys ( like ctrl ) which leaves Resharpers bindings as default
+This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys ( like ctrl ) which leaves Resharpers and visual studio bindings as default.  This is due to resharper having an awful lot of functionality bound to lots of different key combinations that rather than working out remapping to vim combinations I've tried to leave resharper pretty standard.  This does mean certain Vim functionality is unavailble, however some of the more useful things are overcome through a custom .vsvimrc
 
 If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR
 https://github.com/keithn/vsvimguide.git
 
 # Setup
 
-This is largely down to personal preference, but by default, some things make things slightly tricky to deal with
+This is largely down to personal preference, but by default, some things make things slightly tricky to deal with.  
 
 ## Escape Key
 
@@ -26,7 +26,7 @@ then you can run this manually, or set it to run on startup, and magically your 
 
 ## .vsvimrc
 
-This is where you can map keys to vim commands.  VsVim allows you to bind things to visual studio, and by extension, resharper.  The following are a number of useful bindings 
+This is where you can map keys to vim commands (it lives in your windows user home directory).  VsVim allows you to bind things to visual studio, and by extension, resharper.  The following are a number of useful bindings 
 
 ```
 nnoremap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
@@ -34,6 +34,8 @@ set clipboard=unnamed
 map ;; A;<Esc>
 map ] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 map [ :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+map - <PageUp>
+map = <PageDown>
 ```
 
 this maps gd ( goto definition ) to resharpers version
@@ -44,6 +46,7 @@ It maps ;; to append a semi colon to the end of the line without going into inse
 
 it binds [ and ] to resharpers goto previous and next method.   By default, in vim, this is previous and next section which has little use within visual studio.  
 
+it binds - and + to pageup and pagedown
 
 # VsVim Fundamentals
 
@@ -120,6 +123,12 @@ This isn't trying to be a beginners guide but just some general advice for begin
 
 ```l``` - cursor down
 
+```H``` - put cursor at top of screen
+
+```M``` - put cursor in middle of screen
+
+```L``` - put cursor at bottom of screen
+
 ```w``` - beginning of next word
 
 ```e``` - end of next word
@@ -135,6 +144,12 @@ This isn't trying to be a beginners guide but just some general advice for begin
 ```m<char>``` - mark current location and store it in ```<char>```
 
 ``` `<char>``` - goto mark set in ```<char>```
+
+From the .vsvimrc bindings
+
+```[``` - Previous Method (triggers R#)
+
+```]``` - Next Method (triggers R#)
 
 # Resharper Fundamentals
 
