@@ -4,7 +4,7 @@ Stack: Visual Studio 2017 - Resharper 2017 - VsVim 2.3
 
 Work in progress!  The guide highlights useful editing commands while programming using VsVim.  
 
-Vims power comes from chaining combinations together, and while much of vim is well documented it is often hard to learn effective combo!
+Vims power comes from chaining combinations together, and while much of vim is well documented it is often hard to learn effective combos, and with Resharper we have a lot more combos at our disposal.  The purpose of this gudie is to document really good VsVim / Resharper editing techniques by leveraging various combos.
 
 This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys ( like ctrl ) which leaves Resharpers and visual studio bindings as default.  This is due to resharper having an awful lot of functionality bound to lots of different key combinations that rather than working out remapping to vim combinations I've tried to leave resharper pretty standard.  This does mean certain Vim functionality is unavailble, however some of the more useful things are overcome through a custom .vsvimrc
 
@@ -179,7 +179,6 @@ Assuming the Visual Studio key bindings are used
 # Scenarios
 
 
-
 # Resources 
 
 ## Websites
@@ -192,4 +191,6 @@ http://carnackeys.com/ - Displays key combos on your screen
 https://obsproject.com/ - Free open source Screen casting software
 
 
+# Contributors
 
+ - Keith Nicholas
