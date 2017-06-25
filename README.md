@@ -15,13 +15,7 @@ https://github.com/keithn/vsvimguide.git
 
 This is largely down to personal preference, but by default, some things are slightly tricky to deal with and adaptions / compromises need to be made
 
-## Escape Key
 
-The escape key is hugely important to Vim, however, the key itself is a bit far away on many keyboards.  So one popular option is to bind your capslock key to be escape ( there are other key combos you can bind escape to, but I think this is a good option if you never use your caps lock )
-
-To do this install AutoHotKey, create a file on your desktop called  "CapsToEscape.cpk"
-and put the following line in the file```Capslock::Esc```  (or download the file from this repository)
-then you can run this manually, or set it to run on startup, and magically your caps lock key will now be the esc key.  One thing to note, ensure caps lock is OFF before running the script otherwise you'll be stuck with caps on.
 
 
 ## .vsvimrc
@@ -48,20 +42,15 @@ it binds [ and ] to resharpers goto previous and next method.   By default, in v
 
 it binds - and + to pageup and pagedown
 
-## Visual studio keyboard binding
+##Auto Hot Key
 
-When Auto complete dialogs come up, they need the arrow keys to navigate up and down between options, to avoid having to use the arrow keys we can bind Vim like bindings
+There are a number of bindings which Visual Studio and vsvim can't change when it comes to resharper and pop up dialogs.  In this repository there is a auto hot key script (vsvim.ahk) which binds the following keys
 
-In Tools->Options->Enviroment->Keyboard
+```Caps Lock``` - ```Esc```  This is one of the most useful bindings as the ```Esc``` key is needed a lot and for many people they hardly ever use ```Caps Lock``` 
+```ALT-K``` -  Up Arrow, this is for use in popup dialogs like any of R# goto dialogs
+```ALT-J``` -  Down Arrow
 
-Set the following bindings (Global)
-
-
-```ALT-J``` - Edit.LineDown
-
-```ALT-H``` - Edit.LineUp
-
-
+Set this script to run on startup.
 
 # VsVim Fundamentals
 
@@ -156,9 +145,9 @@ This isn't trying to be a beginners guide but just some general advice for begin
 
 ```*``` - search for word under cursor
 
-```m<char>``` - mark current location and store it in ```<char>```
+```m<char>``` - mark current location and store it in ```<char>```  if the letter is a Capital letter, then it works across files
 
-``` `<char>``` - goto mark set in ```<char>```
+``` `<char>``` - goto mark set in ```<char>```  if the letter is a capital letter it will jump to the file with the mark
 
 From the .vsvimrc bindings
 
