@@ -185,7 +185,11 @@ Assuming the Visual Studio key bindings are used
 
 # Scenarios
 
-## 
+
+
+#Sources of Tips
+
+https://youtrack.jetbrains.com/issue/RSRP-465176
 
 
 # Resources 
