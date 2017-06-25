@@ -42,7 +42,7 @@ it binds [ and ] to resharpers goto previous and next method.   By default, in v
 
 it binds - and + to pageup and pagedown
 
-##Auto Hot Key
+## Auto Hot Key
 
 There are a number of bindings which Visual Studio and vsvim can't change when it comes to resharper and pop up dialogs.  In this repository there is a auto hot key script (vsvim.ahk) which binds the following keys
 
