@@ -154,8 +154,11 @@ This isn't trying to be a beginners guide but just some general advice for begin
 Use it to nagigate to places faster
 
 ```/```  search forward,  by itself repeats the last search but forwards
+
 ```?```  search back, by itself repeats the last search but backwards
+
 ```n```  find next, will go to the next forward or the next back  ( depends on whether you used ```/``` or ```?```)
+
 ```N```  find previous, will go to the previous forward or the previous back
 
 
