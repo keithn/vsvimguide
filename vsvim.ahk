@@ -1,6 +1,6 @@
 SetTitleMatchMode, RegEx
-#IfWinActive .*Microsoft Visual Studio|JetPopupMenuView|ReSharper|dotPeek|PyCharm|Rider|Android Studio
+#IfWinActive .*Microsoft Visual Studio|JetPopupMenuView|ReSharper|dotPeek|PyCharm|Rider|Android Studio|.*GVIM|.*Visual Studio Code
 <!k::Send {Up}
 <!j::Send {Down}
-Capslock::Esc
 #IfWinActive
+Capslock::Esc

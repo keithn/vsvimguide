@@ -208,7 +208,10 @@ https://youtrack.jetbrains.com/issue/RSRP-465176
 # Resources 
 
 ## Websites
+
 http://vim.wikia.com/wiki/Vim_Tips_Wiki  - so much gold here, but hard to find relevant nuggets
+
+https://vimhelp.appspot.com/index.txt - definitive list of all Vim commands
 
 ## Software
 
