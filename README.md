@@ -198,6 +198,9 @@ Assuming the Visual Studio key bindings are used
 
 # Scenarios
 
+## Navigation
+
+###Big Movements to little Movements
 
 
 #Sources of Tips
