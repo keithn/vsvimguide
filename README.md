@@ -200,7 +200,16 @@ Assuming the Visual Studio key bindings are used
 
 ## Navigation
 
+###Little Movements
+
+###Big Movements
+
 ###Big Movements to little Movements
+
+In general getting around your code you should prefer to use the quickest keystroke to get the biggest movement to get to where you want to go.  This means avoiding using cursor keys like hjkl until they are the quickest keystroke to get where you want.  
+
+Quite often in Vim there is a VERY quick way to get where you want (or resharper has you covered also), however it often requires knowing exact counts of things to skip(words, letters, lines, fragments).  After a while you get an intuitive feeling for this, but don't worry too much about it, just use your instinct on where you want to go, and use finer grained navigations if you miss your target.
+
 
 
 #Sources of Tips
@@ -214,7 +223,7 @@ https://youtrack.jetbrains.com/issue/RSRP-465176
 
 http://vim.wikia.com/wiki/Vim_Tips_Wiki  - so much gold here, but hard to find relevant nuggets
 
-https://vimhelp.appspot.com/index.txt - definitive list of all Vim commands
+https://vimhelp.appspot.com - definitive list of all Vim commands
 
 ## Software
 
