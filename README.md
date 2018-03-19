@@ -1,6 +1,6 @@
 # VsVim + Resharper Guide with C# editing scenarios
 
-Stack: Visual Studio 2017 - Resharper 2017 - VsVim 2.3
+Stack: Visual Studio 2017 - Resharper 2017 - VsVim 2.3 - AceJump
 
 Work in progress!  The guide highlights useful editing commands while programming using VsVim.  
 
@@ -10,6 +10,8 @@ This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys 
 
 If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR on the repository
 https://github.com/keithn/vsvimguide.git
+
+AceJump is an easy motion ( from the world of Vim ) plugin for Visual Studio.  It works well with VsVim.  Ironically there is a EasyMotion port done by the author of VsVim but it doesn't work well with VsVim.    AceJump is also available as a plugin to the jetbrains toolset.  By default it maps to ```Ctrl-Alt-;``` however I also map it to the spacebar because it is so useful.
 
 # Setup
 
@@ -24,6 +26,13 @@ This is where you can map keys to vim commands (it lives in your windows user ho
 
 ```
 nnoremap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+nnoremap <Space> :vsc Tools.InvokeAceJumpCommand<CR>
+nnoremap ,e :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+nnoremap ,E :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+nnoremap ,s :vsc ReSharper.ReSharper_SurroundWith<CR>
+nnoremap ,u :vsc ReSharper.ReSharper_GotoUsage<CR>
+nnoremap ,d :vsc ReSharper.ReSharper_DuplicateText<CR>
+nnoremap ,, :vsc ReSharper.ReSharper_GotoText<CR>
 set clipboard=unnamed
 map ;; A;<Esc>
 map ] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
