@@ -1,6 +1,6 @@
 # VsVim + Resharper Guide with C# editing scenarios
 
-Stack: Visual Studio 2017 - Resharper 2017 - VsVim 2.3 - AceJump
+Stack: Visual Studio 2017 - Resharper 2017 - VsVim  - AceJump - RelativeLineNumbers
 
 Work in progress!  The guide highlights useful editing commands while programming using VsVim.  
 
@@ -12,6 +12,8 @@ If there are any editing scenarios in relation to C# coding not covered raise an
 https://github.com/keithn/vsvimguide.git
 
 AceJump is an easy motion ( from the world of Vim ) plugin for Visual Studio.  It works well with VsVim.  Ironically there is a EasyMotion port done by the author of VsVim but it doesn't work well with VsVim.    AceJump is also available as a plugin to the jetbrains toolset.  By default it maps to ```Ctrl-Alt-;``` however I also map it to the spacebar because it is so useful.
+
+RelativeLineNumbers puts a margin to the right next to visual studios line numbers with the relative line numbers from where your cursor is.  This helps with various motions and commands involving multiple lines.  For example when you want to delete multiple lines ```<n>dd``` it can be hard to count how many lines over 5 you need to delete.  This makes it easy.   
 
 # Setup
 
