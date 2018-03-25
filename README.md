@@ -39,8 +39,6 @@ set clipboard=unnamed
 map ;; A;<Esc>
 map ] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 map [ :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
-map - <PageUp>
-map = <PageDown>
 ```
 
 this maps gd ( goto definition ) to resharpers version
