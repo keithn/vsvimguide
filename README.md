@@ -193,6 +193,7 @@ Assuming the Visual Studio key bindings are used
 
 ```Alt+Enter``` - Context aware Actions / Quick fixes / transformations
 
+```Ctrl-Alt-Ins``` - Create new File / Template
 
 # Visual Studio Fundamentals
 
@@ -207,6 +208,13 @@ Assuming the Visual Studio key bindings are used
 
 # Scenarios
 
+##Add new File to specific project
+
+There's no easy way to navigate to a project and add a new file, the following is a workaround
+
+```Ctrl-Alt-L``` To select solution explorer
+if you have mapped the ```Alt-J``` and ```Alt-K``` using autohotkey you can navigate to the project otherwise use arrow keys
+```Ctrl-Alt-Ins``` Create new file
 
 
 #Sources of Tips
