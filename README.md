@@ -212,8 +212,12 @@ Assuming the Visual Studio key bindings are used
 
 There's no easy way to navigate to a project and add a new file, the following is a workaround
 
+either
 ```Ctrl-Alt-L``` To select solution explorer
 if you have mapped the ```Alt-J``` and ```Alt-K``` using autohotkey you can navigate to the project otherwise use arrow keys
+or
+```Ctrl-T``` Search Everywhere, and type the project name.   This resist showing you the project until it's one of the last options matching
+Then
 ```Ctrl-Alt-Ins``` Create new file
 
 
