@@ -227,7 +227,7 @@ if you have mapped the ```Alt-J``` and ```Alt-K``` using autohotkey you can navi
 ```Ctrl-Alt-Ins``` Create new file
 
 
-#Sources of Tips
+# Sources of Tips
 
 https://youtrack.jetbrains.com/issue/RSRP-465176
 
