@@ -208,7 +208,7 @@ Assuming the Visual Studio key bindings are used
 
 # Scenarios
 
-##Add new File to specific project
+## Add new File to specific project
 
 There's no easy way to navigate to a project and add a new file, the following is a workaround
 
