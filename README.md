@@ -210,7 +210,7 @@ Assuming the Visual Studio key bindings are used
 
 ## Add new File to specific project
 
-There's no easy way to navigate to a project and add a new file, the following is a workaround
+There's no direct way to add a file to a specific, the following sequences can be used
 
 **Either**
 
@@ -220,7 +220,7 @@ if you have mapped the ```Alt-J``` and ```Alt-K``` using autohotkey you can navi
 
 **Or**
 
-```Ctrl-T``` Search Everywhere, and type the project name.   This resist showing you the project until it's one of the last options matching
+```Ctrl-T``` Search Everywhere, and type ```/fp``` to filter projects only then the project name. 
 
 **Then**
 
