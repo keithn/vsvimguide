@@ -91,7 +91,7 @@ There are a number of bindings which Visual Studio and vsvim can't change when i
 
 Set this script to run on startup.
 
-The ```Alt-K``` and ```Alt-J``` Combos are useful in many cases where normally you'd have to use the arrow keys in windows or dropdown lists.  Reaching for the arrow keys is generally always an annoying action for a Vimmer.
+The ```Alt-K``` and ```Alt-J``` Combos are useful in many cases where normally you'd have to use the arrow keys in windows or dropdown lists.  Reaching for the arrow keys is generally always an annoying action for a Vimmer.  If you haven't used VsVim and Resharper together yet then it won't be obvious that this happens a LOT with Resharper as you do various refactorings little dropdowns come up with various options, and it really slows you down if you have to reach for the arrow keys
 
 # VsVim Fundamentals
 
