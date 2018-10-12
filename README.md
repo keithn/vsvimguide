@@ -1,26 +1,26 @@
 # VsVim + Resharper Guide with C# editing scenarios
 
-Stack: Visual Studio 2017 - Resharper 2018.2 - VsVim 2.6
+Stack: Visual Studio 2017 - Resharper 2018.2 - VsVim 2.6 - AceJump - AutoHotKey
 
-Work in progress!  The guide highlights useful editing commands while programming using VsVim.  
+This is an opionated guide on how to use Resharper and VsVim together for C# programming ( While still applicable for F# and VB.NET, the examples and focus on C#)
 
-Vims power comes from chaining combinations together, and while much of vim is well documented it is often hard to learn effective combos, and with Resharper we have a lot more combos at our disposal.  The purpose of this gudie is to document really good VsVim / Resharper editing techniques by leveraging various combos.
-
-This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys ( like ctrl ) which leaves Resharpers and visual studio bindings as default.  This is due to resharper having an awful lot of functionality bound to lots of different key combinations that rather than working out remapping to vim combinations I've tried to leave resharper pretty standard.  This does mean certain Vim functionality is unavailble, however some of the more useful things are overcome through a custom .vsvimrc
+Vims power comes from chaining combinations together, and while much of vim is well documented it is often hard to learn effective combos, and with Resharper we have a lot more combos at our disposal.  The purpose of this guide is to document really good VsVim / Resharper editing techniques by leveraging various combos.
 
 If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR on the repository
 https://github.com/keithn/vsvimguide.git
 
 # Setup
 
-This is largely down to personal preference, but by default, some things are slightly tricky to deal with and adaptions / compromises need to be made
+This is largely down to personal preference, but by default, some things are slightly tricky to deal with and adaptions / compromises need to be made.  The following is an opinionated setup that is meant as a starting point for customization.
 
 
 ## Resharper / VsVim Handling of Ctrl
 
-In the VsVim Settings you can set whether VsVim or VisualStudio should handle the various Ctrl key combinations, there is fine grained control over the various Ctrl combintaions, but in general, perfer using VsVim for most of them.  Key Combinations that involve Shift and Alt are fine and don't clash with VsVim so can be left as desired though you can also optionally map combos to Vim friendly combos also
+In the VsVim Settings you can set whether VsVim or VisualStudio should handle the various Ctrl key combinations, there is fine grained control over the various Ctrl combintaions, but in general, perfer using VsVim if VsVim has functionality that uses Ctrl.   Key Combinations that involve Shift and Alt are fine and don't clash with VsVim so can be left as desired though you can also optionally map combos to Vim friendly combos also.  You can leave the following ```Ctrl``` keys left bound to visual studio
 
-### Unit Testing
+```Ctrl-t```  - Not supported by VsVim, so nicer left bound to resharpers search functions
+
+### Unit Testing Key Combos
 
 Usually unit testing is accessed through ```<Ctrl>-U<Letter>```  this interferes with VsVim "Half Page Up".  So perfer to bind the Unit Testing shortcuts to ```Alt-<Number>```.  It is also worthwhile to set the scope for this to be global to visual studio and remove all other keybindings in other scopes where it uses the Alt Number combos.  This of course depends on your preferences and what other tools you make use of inside Visual Studio 
 
@@ -44,7 +44,7 @@ Reccommened Bindings :-
 
 ## .vsvimrc
 
-This is where you can map keys to vim commands (it lives in your windows user home directory).  VsVim allows you to bind things to visual studio, and by extension, resharper.  The following are a number of useful bindings 
+This is where you can map keys like the traditional vim editor (it lives in your windows user home directory).  VsVim also allows you to bind things to visual studio commands, and by extension, resharper.  The following are a number of useful bindings 
 
 ```
 set ignorecase
@@ -69,11 +69,12 @@ map ] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 map [ :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 map zl :so ~/.vsvimrc<CR>
 ```
+
 To access non Vim things ```<Space>``` is super useful, normally in Vim it would advance you one letter.  In practice this is of limited use
  
-These bind a number of resharper commands that are normally bound to ```<Ctrl>-<SomeKeyCombo>```  to ```<Space>-<Letter>```.  Customize this to suit your style
+Most of thse are bindings to resharper commands that VsVim hides, these are the commands that are normally bound to ```<Ctrl>-<SomeKeyCombo>```  to ```<Space>-<Letter>```.  Customize this to suit
 
-It also maps AceJump to ```<Space><Space>```
+It also maps AceJump to ```<Space><Space>```.  AceJump allows you to quickly jump to differnt points in the code.  See [AceJump in Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jsturtevant.AceJump) for a demo of how it works.  It is a limited implemenation of a popular plugin in Vim called 'EasyMotion'.  There is also a plugin for Visual Studio called easymotion which is written by the same author as VsVim, but ironically isn't compatible with VsVim.  
 
 The ```[ ]``` keys are bound to next and previous method, the default Vim behaviour is not generally that useful when coding C# / F#
 
@@ -103,8 +104,7 @@ This isn't trying to be a beginners guide but just some general advice for begin
 - Start coming out of insert mode to practice Vim things,  hjkl to move around, w to move between words,  dd to delete lines, c commands to change text like ciw ci" cw, and the corresponding delete commands  diw dw   
 - Keep learning commands like the ones in this guide till you are using them by default
 - Start challenging yourself to stay out of insert mode
-- At this point you should start feeling Vim is a more productive way to edit and you'll naturally keep expanding your skills, keep looking at tips, often many of the combos won't occur to you even though you know what the commands do.  Or you may find there is even a better combo than the current combo you use.
-
+- At this point you should start feeling Vim is a more productive way to edit and you'll naturally keep expanding your skills, keep looking at tips.  It is not unusual for tips to open your eyes to completely different ways of how you can do things.
 
 ## Changing Text
 
@@ -140,7 +140,6 @@ This isn't trying to be a beginners guide but just some general advice for begin
 ```s``` - substitute, remove the character under cursor and enter insert mode
 
 ```<n>s``` - remove the next ```<n>``` characters and enter insert mode
-
 
 ```o``` - open ( leave in insert mode) a new line under current line with correct indenting
 
@@ -211,7 +210,7 @@ From the .vsvimrc bindings
 
 Assuming the Visual Studio key bindings are used
 
-```Ctrl+t``` - Navigrate to File
+```Ctrl+t``` - Navigate to File
 
 ```Alt+Ins``` - Generate Menu, allows you to generate code depending on current context
 
@@ -228,7 +227,6 @@ Assuming the Visual Studio key bindings are used
 
 ```Ctrl+Q``` - Quick Launch, allows you to search and run any command visual studio knows about, tells you if it has a key binding, and its menu location.  
 
-
 ```Alt+F-d-n``` - Add new project to solution
 
 ```Alt+T-n-n``` - Manage Nuget Packages for Solution
@@ -237,12 +235,7 @@ Assuming the Visual Studio key bindings are used
 
 # Scenarios
 
-
-
-#Sources of Tips
-
-https://youtrack.jetbrains.com/issue/RSRP-465176
-
+TBD
 
 # Resources 
 
@@ -252,13 +245,3 @@ http://vim.wikia.com/wiki/Vim_Tips_Wiki  - so much gold here, but hard to find r
 
 https://vimhelp.appspot.com/index.txt - definitive list of all Vim commands
 
-## Software
-
-http://carnackeys.com/ - Displays key combos on your screen
-
-https://obsproject.com/ - Free open source Screen casting software
-
-
-# Contributors
-
- - Keith Nicholas
