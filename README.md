@@ -263,20 +263,20 @@ This will introduce a varible
 ```var add = a + b;``` we now press ```<Tab> to leave the type as ```var``` and then we type ```sum<Tab>``` to change the variable name and then finally <Tab> to complete the refactoring at which point the code will now look like
 
 ```csharp	
-        public int Add(int a, int b)
-        {
-            var sum = a + b;
-            return sum;
-        }
+public int Add(int a, int b)
+{
+    var sum = a + b;
+    return sum;
+}
 ```
 
 More problematic is when we want to introduce a variable for a partial part of a statement, given the following code
 
 ```csharp
-        public int Average(int a, int b)
-        {
-            return (a + b) / 2;
-        }
+public int Average(int a, int b)
+{
+    return (a + b) / 2;
+}
 ```
 
 We again want to introduce a variable for the sum part, however this time we will need to select the ```(a + b)```
