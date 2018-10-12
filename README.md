@@ -1,6 +1,6 @@
 # VsVim + Resharper Guide with C# editing scenarios
 
-Stack: Visual Studio 2017 - Resharper 2018.2 - VsVim 2.6 - AceJump - AutoHotKey
+Stack: Visual Studio 2017 - Resharper 2018.2 - VsVim 2.6 - AceJump - AutoHotKey - RelativeLineNumbers
 
 This is an opionated guide on how to use Resharper and VsVim together for C# programming ( While still applicable for F# and VB.NET, the examples and focus on C#)
 
@@ -64,6 +64,11 @@ map <Space>v :vsc ReSharper.Resharper_IntroVariable<CR>
 map <Space>m :vsc ReSharper.ReSharper_ExtractMethod<CR>
 map <Space>o :vsc ReSharper.ReSharper_Move<CR>
 map <Space>t :vsc ReSharper.ReSharper_GotoType<CR>
+map <Space>tr :vsc ReSharper.ReSharper_UnitTestRunFromContext<CR>
+map <Space>td :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
+map <Space>ta :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
+map <Space>tl :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
+map <Space>b :vsc Build.BuildSolution<CR>
 map <Space><Space> :vsc Tools.InvokeAceJumpCommand<CR>
 map <Space>; A;<Esc>
 map ] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
