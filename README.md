@@ -235,7 +235,61 @@ Assuming the Visual Studio key bindings are used
 
 # Scenarios
 
-TBD
+## Positioning
+
+For many of the scenarios in this guide, positioning your cursor in the right place is the very first task, these scenarios cover a number of ways to get your cursor to the right place.  
+
+*TO BE DONE*
+
+## Refactorings
+
+### Introduce Varible
+
+Resharper introduces a variable for a selection or whole line.  
+
+Given the following code  
+```csharp
+public int Add(int a, int b)
+{
+  return a + b;
+}
+```
+if we want to introduce a variable called ```sum``` then we go to the line with the return statement and position the cursor anywhere in ```a + b``` and type
+
+```<Space>v```
+
+This will introduce a varible
+
+```var add = a + b;``` we now press ```<Tab> to leave the type as ```var``` and then we type ```sum<Tab>``` to change the variable name and then finally <Tab> to complete the refactoring at which point the code will now look like
+
+```
+        public int Add(int a, int b)
+        {
+            var sum = a + b;
+            return sum;
+        }
+```
+
+More problematic is when we want to introduce a variable for a partial part of a statement, given the following code
+
+```
+        public int Average(int a, int b)
+        {
+            return (a + b) / 2;
+        }
+```
+
+We again want to introduce a variable for the sum part, however this time we will need to select the ```(a + b)```
+
+So first we position ourselves anywhere between or on the brackets ```(a + b)``` then we type
+
+```vab``` which creates a visual selection inclusive of the brackets, now we can introduce a variable with 
+
+```<Space>v```, and then we ```<Tab>``` through the introduce variable refactoring as in the previous example
+
+
+
+
 
 # Resources 
 
