@@ -1,6 +1,6 @@
 # VsVim + Resharper Guide with C# editing scenarios
 
-Stack: Visual Studio 2017 - Resharper 2017 - VsVim  - AceJump - RelativeLineNumbers
+Stack: Visual Studio 2017 - Resharper 2018.2 - VsVim 2.6
 
 Work in progress!  The guide highlights useful editing commands while programming using VsVim.  
 
@@ -11,14 +11,34 @@ This guide ( currently ) assumes VsVim doesn't bind to any of the modifier keys 
 If there are any editing scenarios in relation to C# coding not covered raise an issue, or, if you have a scenario you think would be good for the guide, raise a PR on the repository
 https://github.com/keithn/vsvimguide.git
 
-AceJump is an easy motion ( from the world of Vim ) plugin for Visual Studio.  It works well with VsVim.  Ironically there is a EasyMotion port done by the author of VsVim but it doesn't work well with VsVim.    AceJump is also available as a plugin to the jetbrains toolset.  By default it maps to ```Ctrl-Alt-;``` however I also map it to the spacebar because it is so useful.
-
-RelativeLineNumbers puts a margin to the right next to visual studios line numbers with the relative line numbers from where your cursor is.  This helps with various motions and commands involving multiple lines.  For example when you want to delete multiple lines ```<n>dd``` it can be hard to count how many lines over 5 you need to delete.  This makes it easy.   
-
 # Setup
 
 This is largely down to personal preference, but by default, some things are slightly tricky to deal with and adaptions / compromises need to be made
 
+
+## Resharper / VsVim Handling of Ctrl
+
+In the VsVim Settings you can set whether VsVim or VisualStudio should handle the various Ctrl key combinations, there is fine grained control over the various Ctrl combintaions, but in general, perfer using VsVim for most of them.  Key Combinations that involve Shift and Alt are fine and don't clash with VsVim so can be left as desired though you can also optionally map combos to Vim friendly combos also
+
+### Unit Testing
+
+Usually unit testing is accessed through ```<Ctrl>-U<Letter>```  this interferes with VsVim "Half Page Up".  So perfer to bind the Unit Testing shortcuts to ```Alt-<Number>```.  It is also worthwhile to set the scope for this to be global to visual studio and remove all other keybindings in other scopes where it uses the Alt Number combos.  This of course depends on your preferences and what other tools you make use of inside Visual Studio 
+
+Reccommened Bindings :-
+
+```Alt-1```  - ReSharper.ReSharper_UnitTestRunFromContext
+
+```Alt-2```  - ReSharper.ReSharper_UnitTestDebugContext
+
+```Alt-3```  - ReSharper.ReSharper_UnitTestRunSolution
+
+```Alt-4```  - ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun
+
+```Alt-5```  - ReSharper.ReSharper_UnitTestSessionNewSession
+
+```Alt-6```  - ReSharper.ReSharper_UnitTestRunCurrentSession
+
+```Alt-7```  - ReSharper.ReSharper_UnitTestSessionAppendTests
 
 
 
@@ -27,39 +47,49 @@ This is largely down to personal preference, but by default, some things are sli
 This is where you can map keys to vim commands (it lives in your windows user home directory).  VsVim allows you to bind things to visual studio, and by extension, resharper.  The following are a number of useful bindings 
 
 ```
-nnoremap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
-nnoremap <Space> :vsc Tools.InvokeAceJumpCommand<CR>
-nnoremap ,e :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
-nnoremap ,E :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
-nnoremap ,s :vsc ReSharper.ReSharper_SurroundWith<CR>
-nnoremap ,u :vsc ReSharper.ReSharper_GotoUsage<CR>
-nnoremap ,d :vsc ReSharper.ReSharper_DuplicateText<CR>
-nnoremap ,, :vsc ReSharper.ReSharper_GotoText<CR>
+set ignorecase
 set clipboard=unnamed
-map ;; A;<Esc>
+
+map gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+map <Space>r :vsc ReSharper.ReSharper_Rename<CR>
+map <Space>f :vsc ReSharper.ReSharper_GotoFileMember<CR>
+map <Space>e :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+map <Space>E :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+map <Space>s :vsc ReSharper.ReSharper_SurroundWith<CR>
+map <Space>l :vsc ReSharper.ReSharper_LiveTemplatesInsert
+map <Space>u :vsc ReSharper.ReSharper_GotoUsage<CR>
+map <Space>d :vsc ReSharper.ReSharper_DuplicateText<CR>
+map <Space>, :vsc ReSharper.ReSharper_GotoText<CR>
+map <Space>v :vsc ReSharper.Resharper_IntroVariable<CR>
+map <Space>o :vsc ReSharper.ReSharper_Move<CR>
+map <Space>t :vsc ReSharper.ReSharper_GotoType<CR>
+map <Space><Space> :vsc Tools.InvokeAceJumpCommand<CR>
+map <Space>; A;<Esc>
 map ] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 map [ :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+map zl :so ~/.vsvimrc<CR>
 ```
+To access non Vim things ```<Space>``` is super useful, normally in Vim it would advance you one letter.  In practice this is of limited use
+ 
+These bind a number of resharper commands that are normally bound to ```<Ctrl>-<SomeKeyCombo>```  to ```<Space>-<Letter>```.  Customize this to suit your style
 
-this maps gd ( goto definition ) to resharpers version
+It also maps AceJump to ```<Space><Space>```
 
-it sets the windows clipboard to bind to vims default buffer it cuts and pastes to ( which is really useful if you use a clipboard manager like ditto )
+The ```[ ]``` keys are bound to next and previous method, the default Vim behaviour is not generally that useful when coding C# / F#
 
-It maps ;; to append a semi colon to the end of the line without going into insert mode.  This is useful as much resharper / vim magic generates code for you while not in insert mode but leaves the code without the final semicolon.
-
-it binds [ and ] to resharpers goto previous and next method.   By default, in vim, this is previous and next section which has little use within visual studio.  
-
-it binds - and + to pageup and pagedown
+```zl``` is just a quick way to reload your vim settings. WARNING - it doesn't reset your keybindings, so if you remove a mapping, and reload, it won't get rid of the mapping.  But it is useful for loading new bindings / settings
 
 ## Auto Hot Key
 
-There are a number of bindings which Visual Studio and vsvim can't change when it comes to resharper and pop up dialogs.  In this repository there is a auto hot key script (vsvim.ahk) which binds the following keys
+There are a number of bindings which Visual Studio and vsvim can't change when it comes to resharper and pop up dialogs.   In this repository there is a auto hot key script (vsvim.ahk) which binds the following keys
 
 ```Caps Lock``` - ```Esc```  This is one of the most useful bindings as the ```Esc``` key is needed a lot and for many people they hardly ever use ```Caps Lock``` 
 ```ALT-K``` -  Up Arrow, this is for use in popup dialogs like any of R# goto dialogs
 ```ALT-J``` -  Down Arrow
 
 Set this script to run on startup.
+
+The ```Alt-K``` and ```Alt-J``` Combos are useful in many cases where normally you'd have to use the arrow keys in windows or dropdown lists.  Reaching for the arrow keys is generally always an annoying action for a Vimmer.
 
 # VsVim Fundamentals
 
@@ -193,7 +223,6 @@ Assuming the Visual Studio key bindings are used
 
 ```Alt+Enter``` - Context aware Actions / Quick fixes / transformations
 
-```Ctrl-Alt-Ins``` - Create new File / Template
 
 # Visual Studio Fundamentals
 
@@ -208,26 +237,9 @@ Assuming the Visual Studio key bindings are used
 
 # Scenarios
 
-## Add new File to specific project
-
-There's no direct way to add a file to a specific, the following sequences can be used
-
-**Either**
-
-```Ctrl-Alt-L``` To select solution explorer
-
-if you have mapped the ```Alt-J``` and ```Alt-K``` using autohotkey you can navigate to the project otherwise use arrow keys
-
-**Or**
-
-```Ctrl-T``` Search Everywhere, and type ```/fp``` to filter projects only then the project name. 
-
-**Then**
-
-```Ctrl-Alt-Ins``` Create new file
 
 
-# Sources of Tips
+#Sources of Tips
 
 https://youtrack.jetbrains.com/issue/RSRP-465176
 
