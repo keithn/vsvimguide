@@ -287,6 +287,16 @@ So first we position ourselves anywhere between or on the brackets ```(a + b)```
 
 ```<Space>v```, and then we ```<Tab>``` through the introduce variable refactoring as in the previous example
 
+The code will now look like
+
+```csharp
+public int Average(int a, int b)
+{
+    var sum = (a + b);
+    return sum / 2;
+}
+```
+
 
 
 
