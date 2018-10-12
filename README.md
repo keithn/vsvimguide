@@ -61,6 +61,7 @@ map <Space>u :vsc ReSharper.ReSharper_GotoUsage<CR>
 map <Space>d :vsc ReSharper.ReSharper_DuplicateText<CR>
 map <Space>, :vsc ReSharper.ReSharper_GotoText<CR>
 map <Space>v :vsc ReSharper.Resharper_IntroVariable<CR>
+map <Space>m :vsc ReSharper.ReSharper_ExtractMethod<CR>
 map <Space>o :vsc ReSharper.ReSharper_Move<CR>
 map <Space>t :vsc ReSharper.ReSharper_GotoType<CR>
 map <Space><Space> :vsc Tools.InvokeAceJumpCommand<CR>
