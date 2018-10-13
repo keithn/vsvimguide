@@ -13,6 +13,18 @@ https://github.com/keithn/vsvimguide.git
 
 This is largely down to personal preference, but by default, some things are slightly tricky to deal with and adaptions / compromises need to be made.  The following is an opinionated setup that is meant as a starting point for customization.
 
+## Visual Studio
+
+Visual Studio provides lots of mouseable targets on the screen.  For keyboard oriented programming these targets are really not needed and every time you have to reach for your mouse it feels like wasted time. Unfortunately a lot of the Visual Studio Modals are not very keyboard friendly, you can drive them through the keyboard, but it is often semi painful.  The following changes are reccommened ( though not necessary )
+
+- Enter Full Screen ( View -> Fullscreen or ```Shift-Alt-Enter``` )
+- Turn off all toolbars.  You wll access all the functionality you need through the keyboard
+- Unpin all the side / bottom tool windows.  
+- Turn off sidebar tabs (Window -> Show Sidebar Tabs, or ```ALT-W b```)
+- Turn off scrollbars (Tools -> Options -> Text Editor -> All Languages -> Scrollbars)
+- Turn on line numbers are displayed (Tools -> Options -> Text Editor -> General -> Line Numbers )
+
+Turning off scrollbars tends to be the mose surprising setting for people used to using a mouse.  You'll find that you don't actually use the scrollbars too often and the times you do want to scroll through your code with your mouse you find the mousewheel tends to be good enough.
 
 ## Resharper / VsVim Handling of Ctrl
 
@@ -20,26 +32,37 @@ In the VsVim Settings you can set whether VsVim or VisualStudio should handle th
 
 ```Ctrl-t```  - Not supported by VsVim, so nicer left bound to resharpers search functions
 
-### Unit Testing Key Combos
+## Unit Testing 
 
-Usually unit testing is accessed through ```<Ctrl>-U<Letter>```  this interferes with VsVim "Half Page Up".  So perfer to bind the Unit Testing shortcuts to ```Alt-<Number>```.  It is also worthwhile to set the scope for this to be global to visual studio and remove all other keybindings in other scopes where it uses the Alt Number combos.  This of course depends on your preferences and what other tools you make use of inside Visual Studio 
+Resharpers unit test runner is quite powerful but it can be difficult to setup through the keyboard so it is generallly better to use the mouse to set it up.  However once you set the setings correctly, the general process of unit testing is fully keyboard driven.  The following are some general tips on how to make the best use of it
+
+- Change Settings to Auto highlight test session on run ( Resharper -> Options -> Unit Testing -> Activate Unit Test Session when run starts )
+- Dock it as window rather than a toolbar window, size it so it's easy to read the failure messages
+- Set Autoscroll on
+- Set Autostart on so it will Run all tests on Build
+
+The activating of the test session when run start doesn't activate when auto building, which is what you want as otherwise it would get annoying losing your focus. It only activates when you activate the testing through a manual action.  To get back to your code press ```<Escape>```  
+
+If a test fails on auto build
+
+
+### Key Bindings
+
+Running unit tests is handled from the Vim bindings, but there are number of options you will want to set in the Unit Test Session that ReSharper provides.  The following are reccommened bindings for the Unit Session Window
 
 Reccommened Bindings :-
 
-```Alt-1```  - ReSharper.ReSharper_UnitTestRunFromContext
+```Alt-1```  - ReSharper.UnitTestSessionAutoScrollOutput
 
-```Alt-2```  - ReSharper.ReSharper_UnitTestDebugContext
+```Alt-2```  - ReSharper.UnitTestSessionTrackRunningTest
 
-```Alt-3```  - ReSharper.ReSharper_UnitTestRunSolution
+```Alt-3```  - ReSharper.ContinuousTestingRunNewAndOutdatedMode
 
-```Alt-4```  - ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun
+```Alt-4```  - ReSharper.ContinuousTestingRunNewAndOutdatedMode
 
-```Alt-5```  - ReSharper.ReSharper_UnitTestSessionNewSession
+```Alt-5```  - ReSharper.ContinuousTestingCoverNewAndOutdatedMode
 
-```Alt-6```  - ReSharper.ReSharper_UnitTestRunCurrentSession
-
-```Alt-7```  - ReSharper.ReSharper_UnitTestSessionAppendTests
-
+Toggling Any of the Alt 3 4 5 will turn of Continous Test Mode
 
 
 ## .vsvimrc
@@ -68,12 +91,14 @@ map <Space>tr :vsc ReSharper.ReSharper_UnitTestRunFromContext<CR>
 map <Space>td :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
 map <Space>ta :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
 map <Space>tl :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
+map <Space>tt :vsc ReSharper.ReSharper_ShowUnitTestSessions<CR>
 map <Space>b :vsc Build.BuildSolution<CR>
 map <Space><Space> :vsc Tools.InvokeAceJumpCommand<CR>
 map <Space>; A;<Esc>
 map ] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 map [ :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 map zl :so ~/.vsvimrc<CR>
+
 ```
 
 To access non Vim things ```<Space>``` is super useful, normally in Vim it would advance you one letter.  In practice this is of limited use
