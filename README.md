@@ -40,8 +40,6 @@ Resharpers unit test runner is quite powerful but it can be difficult to setup t
 - Set Autoscroll on
 - Set Autostart on so it will Run all tests on Build
 
-
-
 ### Key Bindings
 
 Running unit tests is handled from the Vim bindings, but there are number of options you will want to set in the Unit Test Session that ReSharper provides.  The following are recommend bindings for the Unit Session Window
@@ -56,8 +54,7 @@ Running unit tests is handled from the Vim bindings, but there are number of opt
 
 ```Alt-5```  - ReSharper.ContinuousTestingCoverNewAndOutdatedMode
 
-Toggling Any of the Alt 3 4 5 will turn off Continuous Test Mode
-
+Toggling Any of the ```Alt 3 4 5``` will turn off Continuous Test Mode
 
 ## .vsvimrc
 
@@ -86,13 +83,14 @@ map <Space>td :vsc ReSharper.ReSharper_UnitTestDebugContext<CR>
 map <Space>ta :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
 map <Space>tl :vsc ReSharper.ReSharper_UnitTestSessionRepeatPreviousRun<CR>
 map <Space>tt :vsc ReSharper.ReSharper_ShowUnitTestSessions<CR>
+map <Space>/ :vsc ReSharper.ReSharper_LineComment<CR>
+map <Space>qk :vsc Tools.CustomizeKeyboard<CR>
 map <Space>b :vsc Build.BuildSolution<CR>
 map <Space><Space> :vsc Tools.InvokeAceJumpCommand<CR>
 map <Space>; A;<Esc>
 map ] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 map [ :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 map zl :so ~/.vsvimrc<CR>
-
 ```
 
 To access non Vim things ```<Space>``` is super useful, normally in Vim it would advance you one letter.  In practice this is of limited use
@@ -126,7 +124,7 @@ The main reason for this guide is essentially how to use Vim effectively with vi
 This isn't trying to be a beginners guide but just some general advice for beginners about how to make the switch without too much friction.  Vim takes a while to get good at and much of the advice advocates enduring the pain until you get good enough, but you don't have to.   You can go through a progression.
 
 - It's ok to stay in insert mode, use arrow keys, and your mouse, everything will be semi normal
-- Start coming out of insert mode to practice Vim things,  hjkl to move around, w to move between words,  dd to delete lines, c commands to change text like ciw ci" cw, and the corresponding delete commands  diw dw   
+- Start coming out of insert mode to practice Vim things,  ```hjkl``` to move around, w to move between words,  dd to delete lines, c commands to change text like ciw ci" cw, and the corresponding delete commands  diw dw   
 - Keep learning commands like the ones in this guide till you are using them by default
 - Start challenging yourself to stay out of insert mode
 - At this point you should start feeling Vim is a more productive way to edit and you'll naturally keep expanding your skills, keep looking at tips.  It is not unusual for tips to open your eyes to completely different ways of how you can do things.
@@ -138,9 +136,9 @@ This isn't trying to be a beginners guide but just some general advice for begin
 
 ```ciw``` - changes the entire worth that the cursor is on
 
-```cf<char>``` - changes text until you find the character <char>, includes the find char
+```cf<char>``` - changes text until you find the character ```<char>```, includes the find char
 
-```ct<char>``` - changes text until you find the character <char>, but don't include the char
+```ct<char>``` - changes text until you find the character ```<char>```, but don't include the char
 
 ```c<n>f<char>``` -  same as previous cf but find the nth occurrence of the char
 
@@ -266,6 +264,27 @@ For many of the scenarios in this guide, positioning your cursor in the right pl
 
 *TO BE DONE*
 
+## Selecting
+
+Selecting text is key to many refactoring and code transformations. The following scenarios show a number of ways you can select text
+
+*TO BE DONE*
+
+## Unit Testing
+
+Managing unit tests efficiently is key to doing things like TDD and making sure the unit test process is not painful or requires any undue effort
+
+*TO BE DONE*
+
+### Running Tests
+
+### Navigating to Failed Tests
+
+### Debugging Tests
+
+### Introducing a Type in a test and getting it into the correct project
+
+
 ## Refactorings
 
 ### Introduce Variable
@@ -321,10 +340,6 @@ public int Average(int a, int b)
     return sum / 2;
 }
 ```
-
-
-
-
 
 # Resources 
 
