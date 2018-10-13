@@ -36,14 +36,10 @@ In the VsVim Settings you can set whether VsVim or VisualStudio should handle th
 
 Resharpers unit test runner is quite powerful but it can be difficult to setup through the keyboard so it is generally better to use the mouse to set it up.  However once you set the settings correctly, the general process of unit testing is fully keyboard driven.  The following are some general tips on how to make the best use of it
 
-- Change Settings to Auto highlight test session on run ( Resharper -> Options -> Unit Testing -> Activate Unit Test Session when run starts )
 - Dock it as window rather than a toolbar window, size it so it's easy to read the failure messages
 - Set Autoscroll on
 - Set Autostart on so it will Run all tests on Build
 
-The activating of the test session when run start doesn't activate when auto building, which is what you want as otherwise it would get annoying losing your focus. It only activates when you activate the testing through a manual action.  To get back to your code press ```<Escape>```  
-
-If a test fails on auto build
 
 
 ### Key Bindings
@@ -60,7 +56,7 @@ Running unit tests is handled from the Vim bindings, but there are number of opt
 
 ```Alt-5```  - ReSharper.ContinuousTestingCoverNewAndOutdatedMode
 
-Toggling Any of the Alt 3 4 5 will turn of Continuous Test Mode
+Toggling Any of the Alt 3 4 5 will turn off Continuous Test Mode
 
 
 ## .vsvimrc
