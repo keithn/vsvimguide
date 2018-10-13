@@ -105,7 +105,7 @@ To access non Vim things ```<Space>``` is super useful, normally in Vim it would
  
 Most of thse are bindings to resharper commands that VsVim hides, these are the commands that are normally bound to ```<Ctrl>-<SomeKeyCombo>```  to ```<Space>-<Letter>```.  Customize this to suit
 
-It also maps AceJump to ```<Space><Space>```.  AceJump allows you to quickly jump to differnt points in the code.  See [AceJump in Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jsturtevant.AceJump) for a demo of how it works.  It is a limited implementation of a popular plugin in Vim called 'EasyMotion'.  There is also a plugin for Visual Studio called easymotion which is written by the same author as VsVim, but ironically isn't compatible with VsVim.  
+It also maps AceJump to ```<Space><Space>```.  AceJump allows you to quickly jump to different points in the code.  See [AceJump in Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jsturtevant.AceJump) for a demo of how it works.  It is a limited implementation of a popular plugin in Vim called 'EasyMotion'.  There is also a plugin for Visual Studio called easymotion which is written by the same author as VsVim, but ironically isn't compatible with VsVim.  
 
 The ```[ ]``` keys are bound to next and previous method, the default Vim behavior is not generally that useful when coding C# / F#
 
@@ -125,7 +125,7 @@ The ```Alt-K``` and ```Alt-J``` Combos are useful in many cases where normally y
 
 # VsVim Fundamentals
 
-The main reason for this guide is essentially how to use Vim effectively with visual studio and resharper.  The key motivation to VsVim is to be able to leverage Vims powerful editing capabilites within Visual Studio, so we need to spend a lot of effort to get really effective with standard vim commands ( and sepecifically VsVim ).  But often we step outside of Vim and make use of resharper / auto complete / refactorings / code generation / templates / Visual Studio hot keys to better leverage all the toys at our disposal
+The main reason for this guide is essentially how to use Vim effectively with visual studio and resharper.  The key motivation to VsVim is to be able to leverage Vims powerful editing capabilities within Visual Studio, so we need to spend a lot of effort to get really effective with standard vim commands ( and specifically VsVim ).  But often we step outside of Vim and make use of resharper / auto complete / refactorings / code generation / templates / Visual Studio hot keys to better leverage all the toys at our disposal
 
 ## How to switch to VsVim as a complete Noob
 
@@ -140,17 +140,17 @@ This isn't trying to be a beginners guide but just some general advice for begin
 ## Changing Text
 
 
-```cw```  - changes the word from the cusor to the end of the word
+```cw```  - changes the word from the cursor to the end of the word
 
 ```ciw``` - changes the entire worth that the cursor is on
 
-```cf<char>``` - changes text until you find the chararcter <char>, includes the find char
+```cf<char>``` - changes text until you find the character <char>, includes the find char
 
-```ct<char>``` - changes text until you find the charracter <char>, but don't include the char
+```ct<char>``` - changes text until you find the character <char>, but don't include the char
 
-```c<n>f<char>``` -  same as previous cf but find the nth occurance of the char
+```c<n>f<char>``` -  same as previous cf but find the nth occurrence of the char
 
-```c<n>t<char>``` -  same as previous ct but find the nth occurance of the char
+```c<n>t<char>``` -  same as previous ct but find the nth occurrence of the char
 
 ```ci(``` - change text inside current brackets ( ) 
 
@@ -186,7 +186,7 @@ This isn't trying to be a beginners guide but just some general advice for begin
 
 ```a``` - append after current cursor (leaves in insert mode )
 
-## Navigaton
+## Navigation
 
 ```h``` - cursor left
 
@@ -208,7 +208,7 @@ This isn't trying to be a beginners guide but just some general advice for begin
 
 ```b``` - beginning of previous word,  if in the middle of a word, it goes back to the beginning of that word
 
-```gd``` - goto defention ( use ontop of methods  / classes etc )
+```gd``` - goto definition ( use on top of methods  / classes etc )
 
 ```zz``` - center current line in center of screen
 
@@ -220,7 +220,7 @@ This isn't trying to be a beginners guide but just some general advice for begin
 
 ## Searching
 
-Use it to nagigate to places faster
+Use it to navigate to places faster
 
 ```/```  search forward,  by itself repeats the last search but forwards
 
@@ -274,7 +274,7 @@ For many of the scenarios in this guide, positioning your cursor in the right pl
 
 ## Refactorings
 
-### Introduce Varible
+### Introduce Variable
 
 Resharper introduces a variable for a selection or whole line.  
 
@@ -289,7 +289,7 @@ if we want to introduce a variable called ```sum``` then we go to the line with 
 
 ```<Space>v```
 
-This will introduce a varible
+This will introduce a variable
 
 ```var add = a + b;``` we now press ```<Tab> to leave the type as ```var``` and then we type ```sum<Tab>``` to change the variable name and then finally <Tab> to complete the refactoring at which point the code will now look like
 
