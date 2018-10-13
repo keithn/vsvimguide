@@ -50,8 +50,6 @@ If a test fails on auto build
 
 Running unit tests is handled from the Vim bindings, but there are number of options you will want to set in the Unit Test Session that ReSharper provides.  The following are recommend bindings for the Unit Session Window
 
-Recommend Bindings :-
-
 ```Alt-1```  - ReSharper.UnitTestSessionAutoScrollOutput
 
 ```Alt-2```  - ReSharper.UnitTestSessionTrackRunningTest
