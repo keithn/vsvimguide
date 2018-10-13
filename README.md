@@ -2,7 +2,7 @@
 
 Stack: Visual Studio 2017 - Resharper 2018.2 - VsVim 2.6 - AceJump - AutoHotKey - RelativeLineNumbers
 
-This is an opionated guide on how to use Resharper and VsVim together for C# programming ( While still applicable for F# and VB.NET, the examples and focus on C#)
+This is an opinionated guide on how to use Resharper and VsVim together for C# programming ( While still applicable for F# and VB.NET, the examples and focus on C#)
 
 Vims power comes from chaining combinations together, and while much of vim is well documented it is often hard to learn effective combos, and with Resharper we have a lot more combos at our disposal.  The purpose of this guide is to document really good VsVim / Resharper editing techniques by leveraging various combos.
 
@@ -15,26 +15,26 @@ This is largely down to personal preference, but by default, some things are sli
 
 ## Visual Studio
 
-Visual Studio provides lots of mouseable targets on the screen.  For keyboard oriented programming these targets are really not needed and every time you have to reach for your mouse it feels like wasted time. Unfortunately a lot of the Visual Studio Modals are not very keyboard friendly, you can drive them through the keyboard, but it is often semi painful.  The following changes are reccommened ( though not necessary )
+Visual Studio provides lots of mouseable targets on the screen.  For keyboard oriented programming these targets are really not needed and every time you have to reach for your mouse it feels like wasted time. Unfortunately a lot of the Visual Studio Modals are not very keyboard friendly, you can drive them through the keyboard, but it is often semi painful.  The following changes are recommend ( though not necessary )
 
 - Enter Full Screen ( View -> Fullscreen or ```Shift-Alt-Enter``` )
-- Turn off all toolbars.  You wll access all the functionality you need through the keyboard
+- Turn off all toolbars.  You will access all the functionality you need through the keyboard
 - Unpin all the side / bottom tool windows.  
 - Turn off sidebar tabs (Window -> Show Sidebar Tabs, or ```ALT-W b```)
 - Turn off scrollbars (Tools -> Options -> Text Editor -> All Languages -> Scrollbars)
 - Turn on line numbers are displayed (Tools -> Options -> Text Editor -> General -> Line Numbers )
 
-Turning off scrollbars tends to be the mose surprising setting for people used to using a mouse.  You'll find that you don't actually use the scrollbars too often and the times you do want to scroll through your code with your mouse you find the mousewheel tends to be good enough.
+Turning off scrollbars tends to be the most surprising setting for people used to using a mouse.  You'll find that you don't actually use the scrollbars too often and the times you do want to scroll through your code with your mouse you find the mousewheel tends to be good enough.
 
 ## Resharper / VsVim Handling of Ctrl
 
-In the VsVim Settings you can set whether VsVim or VisualStudio should handle the various Ctrl key combinations, there is fine grained control over the various Ctrl combintaions, but in general, perfer using VsVim if VsVim has functionality that uses Ctrl.   Key Combinations that involve Shift and Alt are fine and don't clash with VsVim so can be left as desired though you can also optionally map combos to Vim friendly combos also.  You can leave the following ```Ctrl``` keys left bound to visual studio
+In the VsVim Settings you can set whether VsVim or VisualStudio should handle the various Ctrl key combinations, there is fine grained control over the various Ctrl combinations, but in general, prefer using VsVim if VsVim has functionality that uses Ctrl.   Key Combinations that involve Shift and Alt are fine and don't clash with VsVim so can be left as desired though you can also optionally map combos to Vim friendly combos also.  You can leave the following ```Ctrl``` keys left bound to visual studio
 
 ```Ctrl-t```  - Not supported by VsVim, so nicer left bound to resharpers search functions
 
 ## Unit Testing 
 
-Resharpers unit test runner is quite powerful but it can be difficult to setup through the keyboard so it is generallly better to use the mouse to set it up.  However once you set the setings correctly, the general process of unit testing is fully keyboard driven.  The following are some general tips on how to make the best use of it
+Resharpers unit test runner is quite powerful but it can be difficult to setup through the keyboard so it is generally better to use the mouse to set it up.  However once you set the settings correctly, the general process of unit testing is fully keyboard driven.  The following are some general tips on how to make the best use of it
 
 - Change Settings to Auto highlight test session on run ( Resharper -> Options -> Unit Testing -> Activate Unit Test Session when run starts )
 - Dock it as window rather than a toolbar window, size it so it's easy to read the failure messages
@@ -48,9 +48,9 @@ If a test fails on auto build
 
 ### Key Bindings
 
-Running unit tests is handled from the Vim bindings, but there are number of options you will want to set in the Unit Test Session that ReSharper provides.  The following are reccommened bindings for the Unit Session Window
+Running unit tests is handled from the Vim bindings, but there are number of options you will want to set in the Unit Test Session that ReSharper provides.  The following are recommend bindings for the Unit Session Window
 
-Reccommened Bindings :-
+Recommend Bindings :-
 
 ```Alt-1```  - ReSharper.UnitTestSessionAutoScrollOutput
 
@@ -105,9 +105,9 @@ To access non Vim things ```<Space>``` is super useful, normally in Vim it would
  
 Most of thse are bindings to resharper commands that VsVim hides, these are the commands that are normally bound to ```<Ctrl>-<SomeKeyCombo>```  to ```<Space>-<Letter>```.  Customize this to suit
 
-It also maps AceJump to ```<Space><Space>```.  AceJump allows you to quickly jump to differnt points in the code.  See [AceJump in Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jsturtevant.AceJump) for a demo of how it works.  It is a limited implemenation of a popular plugin in Vim called 'EasyMotion'.  There is also a plugin for Visual Studio called easymotion which is written by the same author as VsVim, but ironically isn't compatible with VsVim.  
+It also maps AceJump to ```<Space><Space>```.  AceJump allows you to quickly jump to differnt points in the code.  See [AceJump in Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jsturtevant.AceJump) for a demo of how it works.  It is a limited implementation of a popular plugin in Vim called 'EasyMotion'.  There is also a plugin for Visual Studio called easymotion which is written by the same author as VsVim, but ironically isn't compatible with VsVim.  
 
-The ```[ ]``` keys are bound to next and previous method, the default Vim behaviour is not generally that useful when coding C# / F#
+The ```[ ]``` keys are bound to next and previous method, the default Vim behavior is not generally that useful when coding C# / F#
 
 ```zl``` is just a quick way to reload your vim settings. WARNING - it doesn't reset your keybindings, so if you remove a mapping, and reload, it won't get rid of the mapping.  But it is useful for loading new bindings / settings
 
