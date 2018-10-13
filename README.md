@@ -62,7 +62,7 @@ Recommend Bindings :-
 
 ```Alt-5```  - ReSharper.ContinuousTestingCoverNewAndOutdatedMode
 
-Toggling Any of the Alt 3 4 5 will turn of Continous Test Mode
+Toggling Any of the Alt 3 4 5 will turn of Continuous Test Mode
 
 
 ## .vsvimrc
@@ -103,7 +103,7 @@ map zl :so ~/.vsvimrc<CR>
 
 To access non Vim things ```<Space>``` is super useful, normally in Vim it would advance you one letter.  In practice this is of limited use
  
-Most of thse are bindings to resharper commands that VsVim hides, these are the commands that are normally bound to ```<Ctrl>-<SomeKeyCombo>```  to ```<Space>-<Letter>```.  Customize this to suit
+Most of these are bindings to resharper commands that VsVim hides, these are the commands that are normally bound to ```<Ctrl>-<SomeKeyCombo>```  to ```<Space>-<Letter>```.  Customize this to suit
 
 It also maps AceJump to ```<Space><Space>```.  AceJump allows you to quickly jump to different points in the code.  See [AceJump in Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=jsturtevant.AceJump) for a demo of how it works.  It is a limited implementation of a popular plugin in Vim called 'EasyMotion'.  There is also a plugin for Visual Studio called easymotion which is written by the same author as VsVim, but ironically isn't compatible with VsVim.  
 
