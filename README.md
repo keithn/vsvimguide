@@ -22,7 +22,7 @@ Visual Studio provides lots of mouseable targets on the screen.  For keyboard or
 - Unpin all the side / bottom tool windows.  
 - Turn off sidebar tabs (Window -> Show Sidebar Tabs, or ```ALT-W b```)
 - Turn off scrollbars (Tools -> Options -> Text Editor -> All Languages -> Scrollbars)
-- Turn on line numbers are displayed (Tools -> Options -> Text Editor -> General -> Line Numbers )
+- Turn on line numbers (Tools -> Options -> Text Editor -> General -> Line Numbers)
 
 Turning off scrollbars tends to be the most surprising setting for people used to using a mouse.  You'll find that you don't actually use the scrollbars too often and the times you do want to scroll through your code with your mouse you find the mousewheel tends to be good enough.
 
@@ -270,6 +270,13 @@ Selecting text is key to many refactoring and code transformations. The followin
 
 *TO BE DONE*
 
+## Editing
+
+Simple editing transformations makes up a large amount of programming, both VsVim and Resharper give a lot of assistance with editing your code
+
+*TO BE DONE*
+
+
 ## Unit Testing
 
 Managing unit tests efficiently is key to doing things like TDD and making sure the unit test process is not painful or requires any undue effort
@@ -340,6 +347,8 @@ public int Average(int a, int b)
     return sum / 2;
 }
 ```
+### Extract Method
+
 
 # Resources 
 
