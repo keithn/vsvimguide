@@ -26,6 +26,7 @@ namespace Kata.Tennis
         [InlineData(3, 3, "Deuce")]
         [InlineData(4, 3, "Advantage Player One")]
         [InlineData(5, 3, "Player One Wins")]
+        [InlineData(3, 5, "Player Two Wins")]
         [InlineData(4, 4, "Deuce")]
         [InlineData(4, 5, "Advantage Player Two")]
         [InlineData(4, 6, "Player Two Wins")]
@@ -33,7 +34,7 @@ namespace Kata.Tennis
         {
             Enumerable.Range(0, first).ToList().ForEach(n => _tennisGame.Scores(TennisPlayer.One));
             Enumerable.Range(0, second).ToList().ForEach(n => _tennisGame.Scores(TennisPlayer.Two));
-            Assert.Equal(_tennisGame.Score, score);
+            Assert.Equal(score, _tennisGame.Score);
         }
     }
 
@@ -44,12 +45,12 @@ namespace Kata.Tennis
         public void Scores(TennisPlayer player) => _scores =
             player == TennisPlayer.One ? IncrementScore(_scores) : Flip(IncrementScore(Flip(_scores)));
 
-        private (TennisScore one, TennisScore two) Flip((TennisScore one, TennisScore two) scores) => (scores.two, scores.one);
+        private (TennisScore, TennisScore) Flip((TennisScore one, TennisScore two) scores) => (scores.two, scores.one);
 
-        private (TennisScore current, TennisScore other ) IncrementScore( (TennisScore current, TennisScore other ) scores)
+        private (TennisScore, TennisScore) IncrementScore( (TennisScore currentPlayer, TennisScore otherPlayer ) scores)
         {
-            if (scores.other == TennisScore.Advantage && scores.current == TennisScore.Forty) scores.other--;
-            else scores.current++;
+            if (scores.otherPlayer == TennisScore.Advantage && scores.currentPlayer == TennisScore.Forty) scores.otherPlayer--;
+            else scores.currentPlayer++;
             return scores;
         }
 
