@@ -39,9 +39,7 @@ namespace Kata.Tennis
 
     public class TennisGame
     {
-        private (TennisScore one, TennisScore two) _scores;
-
-        public TennisGame() => _scores = (TennisScore.Love, TennisScore.Love);
+        private (TennisScore one, TennisScore two) _scores = (TennisScore.Love, TennisScore.Love);
 
         public void Scores(TennisPlayer player) => _scores = player == TennisPlayer.One ? IncrementScore(_scores) : Flip(IncrementScore(Flip(_scores)));
 
