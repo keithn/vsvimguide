@@ -47,8 +47,7 @@ namespace Kata.Tennis
         private (TennisScore one, TennisScore two) Flip((TennisScore one, TennisScore two) scores) =>
             (scores.two, scores.one);
 
-        private (TennisScore current, TennisScore other ) IncrementScore(
-            (TennisScore current, TennisScore other ) scores)
+        private (TennisScore current, TennisScore other ) IncrementScore( (TennisScore current, TennisScore other ) scores)
         {
             if (scores.other == TennisScore.Advantage && scores.current == TennisScore.Forty) scores.other--;
             else scores.current++;
