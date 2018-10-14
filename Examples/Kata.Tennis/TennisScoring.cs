@@ -41,20 +41,11 @@ namespace Kata.Tennis
     {
         private (TennisScore one, TennisScore two) _scores;
 
-        public TennisGame()
-        {
-            _scores = (TennisScore.Love, TennisScore.Love);
-        }
+        public TennisGame() => _scores = (TennisScore.Love, TennisScore.Love);
 
-        public void Scores(TennisPlayer player)
-        {
-            _scores = player == TennisPlayer.One ? IncrementScore(_scores) : Flip(IncrementScore(Flip(_scores)));
-        }
+        public void Scores(TennisPlayer player) => _scores = player == TennisPlayer.One ? IncrementScore(_scores) : Flip(IncrementScore(Flip(_scores)));
 
-        private (TennisScore one, TennisScore two) Flip((TennisScore one, TennisScore two) scores)
-        {
-            return (scores.two, scores.one);
-        }
+        private (TennisScore one, TennisScore two) Flip((TennisScore one, TennisScore two) scores) => (scores.two, scores.one);
 
         private (TennisScore current, TennisScore other ) IncrementScore((TennisScore current, TennisScore other ) scores)
         {
