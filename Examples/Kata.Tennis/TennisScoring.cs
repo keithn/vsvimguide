@@ -44,8 +44,7 @@ namespace Kata.Tennis
         public void Scores(TennisPlayer player) => _scores =
             player == TennisPlayer.One ? IncrementScore(_scores) : Flip(IncrementScore(Flip(_scores)));
 
-        private (TennisScore one, TennisScore two) Flip((TennisScore one, TennisScore two) scores) =>
-            (scores.two, scores.one);
+        private (TennisScore one, TennisScore two) Flip((TennisScore one, TennisScore two) scores) => (scores.two, scores.one);
 
         private (TennisScore current, TennisScore other ) IncrementScore( (TennisScore current, TennisScore other ) scores)
         {
