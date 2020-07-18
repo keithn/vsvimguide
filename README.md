@@ -1,5 +1,7 @@
 # VsVim + Resharper Guide with C# editing scenarios
 
+UPDATE: I now use Rider instead of Visual Studio, it comes with the most excellent IdeaVim plugin.  As such I won't be updating this guide but I will likely start a guide to using IdeaVim in Rider. 
+
 Stack: Visual Studio 2017 - Resharper 2018.2 - VsVim 2.6 - AceJump - AutoHotKey - RelativeLineNumbers
 
 This is an opinionated guide on how to use Resharper and VsVim together for C# programming ( While still applicable for F# and VB.NET, the examples and focus on C#)
